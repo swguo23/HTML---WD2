@@ -140,3 +140,17 @@ create table RhpfLO2jOz.Self_Join (
 Emp_name varchar (50),
 Manager_name varchar (50)
 );
+
+create table RhpfLO2jOz.Salary (
+Salary_id int,
+Description varchar (50),
+Emp_id int
+);
+
+insert into RhpfLO2jOz.Salary
+values
+('1', 'CEO', '3'),
+('3', 'Technician', '8'),
+('4', 'qa', '2'),
+('5', 'Test', '2'),
+('6', 'test', '0');
