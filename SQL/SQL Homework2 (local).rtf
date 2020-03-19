@@ -1,0 +1,147 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 create table wd2.Employees (\
+    Employee_ID_Num int,\
+    Name varchar (250),\
+    Location varchar (250),\
+    Position varchar (250)\
+);\
+\
+Create table wd2.Sales (\
+SalesRep int,\
+Product varchar (250),\
+Quantity int,\
+Price int\
+);\
+\
+insert into wd2.Employees\
+values \
+('123456', 'Jack', 'London', 'Phone Sales Asst.'),\
+('654321', 'John', 'New York', 'Web Sales Asst.'),\
+('123321', 'Clara', 'Singapore', 'Direct Sales Asst.'),\
+('456654', 'Joanna', 'Sofia', 'Marketing Asst.');\
+\
+insert into wd2.Sales\
+values\
+('123456', 'TV Set', '1', '1000'),\
+('123456', 'Laptop', '1', '699'),\
+('123321', 'Smart Phone', '2', '399'),\
+('654321', 'Fridge', '1', '500');\
+\
+create table wd2.PAYLIST (\
+IdNum int,\
+Gender varchar (10),\
+Jobcode varchar (25),\
+Salary int,\
+Birth varchar (100),\
+Hired varchar (100)\
+);\
+\
+insert into wd2.PAYLIST\
+values\
+('1639', 'F', 'TA1', '42260', '26JUN70', '28JAN91'),\
+('1065', 'M', 'ME3', '38090', '26JAN54', '07JAN92'),\
+('1400', 'M', 'ME3', '29769', '05NOV67', '16OCT90'),\
+('1561', 'M', '', '36514', '30NOV63', '07OCT87'),\
+('1221', 'F', 'FA3', '0', '22SEP63','04OCT94');\
+\
+create table wd2.employee_r1 (\
+Emp_id int,\
+Emp_name varchar (50),\
+Dep_name varchar (50),\
+Manager_id int\
+);\
+\
+insert into wd2.employee_r1\
+values\
+('1', 'Hasan', 'hr', '2'),\
+('2', 'Saon', 'tech', '2'),\
+('3', 'Sahed', 'qa', '4'),\
+('4', 'Sifat', 'hr', '4'),\
+('5', 'Nayema', 'hr', '4'),\
+('7', 'Tanvir', 'tech', '4'),\
+('8', 'Tasnuva', 'tech','4');\
+\
+create table wd2.employee_r2 (\
+Emp_id int,\
+Emp_name varchar (50),\
+Dep_name varchar (50),\
+Manager_id varchar (50)\
+);\
+\
+insert into wd2.employee_r2\
+values\
+('1', 'Hasan', 'hr', 'Saon'),\
+('2', 'Saon', 'tech', 'Saon'),\
+('3', 'Sahed', 'qa', 'Sifat'),\
+('4', 'Sifat', 'hr', 'sofat'),\
+('5', 'Nayema', 'hr', 'sifat'),\
+('7', 'Tanvir', 'tech', 'sifat'),\
+('8', 'Tasnuva', 'tech','sifat');\
+\
+create table wd2.Inner_Join (\
+Emp_name varchar (50),\
+Description varchar (50)\
+);\
+\
+create table wd2.Left_Join (\
+Emp_name varchar (50),\
+Description varchar (50)\
+);\
+\
+create table wd2.Right_Join (\
+Emp_name varchar (50),\
+Description varchar (50)\
+);\
+\
+create table wd2.Full_Join (\
+Emp_name varchar (50),\
+Description varchar (50)\
+);\
+\
+insert into wd2.Inner_Join\
+values\
+('Saon', 'qa'),\
+('saon', 'test'),\
+('Sahed', 'CEO'),\
+('Tasnuva', 'Technician');\
+\
+insert into wd2.Left_Join\
+values\
+('Hasan', ''),\
+('Saon', 'test'),\
+('Sahed', 'CEO'),\
+('Sifat', 'Technician'),\
+('Nayema', ''),\
+('Tanvir', ''),\
+('Tasnuva', ''),\
+('saon', 'qa');\
+\
+insert into wd2.Right_Join\
+values\
+('Sahed', 'CEO'),\
+('Tasnuva', 'Technician'),\
+('Saon', 'qa'),\
+('Saon', 'Test'),\
+('', 'test');\
+\
+insert into wd2.Full_Join\
+values\
+('Hasan', ''),\
+('Saon', 'qa'),\
+('Sahed', 'CEO'),\
+('Sifat', ''),\
+('Nayema', ''),\
+('Tanvir', ''),\
+('Tasnuva', 'Technician'),\
+('Saon', 'Test');\
+\
+create table wd2.Self_Join (\
+Emp_name varchar (50),\
+Manager_name varchar (50)\
+);}
